@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+  <style>*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  color:black;
+}
+  body {
+      font-family: 'Roboto', sans-serif; /* Googleoboto font for a more authentic look */
+      background-color: wheat;
+      margin: 50;
+      display: flex;
+      justify-content:center ;
+      align-items: top;
+      height: 100vh;
+    radius:50px;
+    border-radius:35px
+    padding:40px
+   
+    }
+
+       .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    : ;
+        border-radius: 20px;
+        padding: 5px 10px;
+      
+    }
+    
+    .search-input {
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 5px;
+        border-radius: 20px;
+    }
+    
+    .search-button {
+        background-color: #4285f4;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 20px;
+        cursor: pointer;      
+      
+    }
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  align-items:top;
+}
+  
+
+#search-input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid
+  border-radius: 5px 0 0 5px;
+}
+
+#search-button {
+  padding: 10px 15px;
+  background-color: #4285f4;
+  color: #fff;
+  border: 1px solid #4285f4;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #3367d6;
+}
+      #clock {
+        font-size: 2.10em;
+        font-border:black
+        background;
+        color:white;
+        align-items:center
+        
+        padding:35px;
+        border-radius:5%;
+        top:20%;
+        
+    }
+#apps{
+  background:rgba(244,344,244,25)};
+  background-filter:blur;
+  height:4x;
+  align-items:bottom;
+  justify-content:space between;
+  gap:3em;
+  backdrop-filter:blur(3px);
+}
+.apps{
+  background: red;
+  background:rgba(244,344,244,25)};
+  background-filter:blur;
+  height:4x;
+  align-items:bottom;
+  justify-content:space between;
+  gap:3em;
+  backdrop-filter:blur(3px);
+}
+  button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+</style>
+  <link rel="stylesheet" href="css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+ </style>
+</head>
+<body>
+  <div id="y">
+  
+      <div class="search-container">
+  <input type="text" id="search-input" placeholder="Search...">
+  <button id="search-button"><i class="fa fa-search"></i></button>
+</div>
+      <div align="center"><div id="clock"></div><br> <br><br><br><br><br><br><br><br><br><br></brbr><br>
+        <button onclick="changeWallpaper()">Change Wallpaper</button> <br> 
+         
+        <div id="apps">
+        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+       <a href="https://www.google.com/"><i class="fa-brands fa-google"></i></a>
+       <a href="https://www.chrome.com/"><i class="fa-brands fa-chrome"></i></a>
+       <a href="https://www.amazon.com/"><i class="fa-brands fa-amazon"></i></a>
+       <a href="https://www.flipkart.com/"><i class="fa-solid fa-cart-shopping"></i></a>
+         <a href="file:///storage/emulated/0/MIUI/ShareMe/review%20section.html"><i class="fa-solid fa-comment"></i></a>
+     
+        </div>
+      </div>
+  
+</body>
+<script>document.getElementById('search-button').addEventListener('click', function() {
+  var searchTerm = document.getElementById('search-input').value;
+  if (searchTerm) {
+    window.location.href = 'https://www.google.com/search?q=' + searchTerm;
+  }
+});
+
+function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    
+    document.getElementById('clock').textContent = timeString;
+}
+
+setInterval(updateClock, 1000);
+  const wallpapers = ['/storage/emulated/0/Android/Picsart_23-08-26_14-09-21-807-1336x2048.jpg'
+      , '/storage/emulated/0/Android/bd35caa1d66da3a15ed952b4ac1010f7.jpg', '/storage/emulated/0/Android/Picsart_23-08-26_14-09-21-807-1336x2048.jpg','/storage/emulated/0/Pictures/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsb2ZmaWNlMjBfYV9kaWdpdGFsX3JlbmRlcmluZ19kaWdpdGFsX2FydF9jb21tZXJjaWFsX2Jhbl8xNmY1NTllNC00MzU3LTRkOWYtOTUyNi04NGFhNDA4NzEzMzlfMS5qcGc.jpg'
+  ,'/storage/emulated/0/Netlify/wp2950966.jpg','/storage/emulated/0/Netlify/Dark-Stones-iPhone-Wallpaper-HD.jpg'];
+        let currentWallpaperIndex = 0;
+
+        function changeWallpaper() {
+            currentWallpaperIndex = (currentWallpaperIndex + 1) % wallpapers.length;
+            document.body.style.backgroundImage = `url('${wallpapers[currentWallpaperIndex]}')`;
+        }
+</script>
+</html>
